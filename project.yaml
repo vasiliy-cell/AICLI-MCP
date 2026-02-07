@@ -1,0 +1,13 @@
+name: AICLI
+description: AI Terminal project
+languages:
+  - Python
+  - Rust
+  - JS/TS
+entry_points:
+  python: python/ai_service.py
+  rust: src-tauri/src/main.rs
+subsystems:
+  - Python AI service
+  - Rust PTY bridge
+  - Frontend (xterm.js + Tauri)
