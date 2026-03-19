@@ -2,11 +2,11 @@
 
 Approximately **~50%** complete. Frontend and AI logic are working; full backend integration is in progress.
 
-### 🎯 Goal and Description
+###  Goal and Description
 
 The project is **educational**: I wrote it to study MCP-server architecture in practice.
 
-### ⚙️ Technical Implementation
+###  Technical Implementation
 
 The server is written in **Python** and communicates via **stdio**. It provides models with context without compromising system security.
 
