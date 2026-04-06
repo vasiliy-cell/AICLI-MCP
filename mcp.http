@@ -1,0 +1,18 @@
+POST http://127.0.0.1:8000/run
+Content-Type: application/json
+
+{
+  "command": "get_tree",
+  "args": {
+    "depth": 2
+  }
+}
+
+###
+
+POST http://127.0.0.1:8000/ask
+Content-Type: application/json
+
+{
+  "prompt": "Найди баги в файле pty.rs"
+}
