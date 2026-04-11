@@ -27,11 +27,16 @@ def read_file(path: str):
 @app.post("/ask")
 def ask_model(req: PromptRequest):
     headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
-    data = {"model": "gpt-4", "prompt": req.prompt, "max_tokens": 512} 
+    data = {
+        "model": "deepseek-chat",
+        "messages": [
+            {"role": "user", "content": req.prompt}
+        ]
+    }
 
-        resp = requests.post(API_URL, headers=headers, json=data)
-        resp.raise_for_status()
-        print(resp.json())  # смотри, что реально возвращает DeepSeek
+    resp = requests.post(API_URL, headers=headers, json=data)
+    resp.raise_for_status()
+    print(resp.json())  # смотри, что реально возвращает DeepSeek
 
     try:
         resp = requests.post(API_URL, headers=headers, json=data)
